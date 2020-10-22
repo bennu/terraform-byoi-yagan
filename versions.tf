@@ -9,9 +9,6 @@ terraform {
     kubernetes = {
       source = "hashicorp/kubernetes"
     }
-    kubernetes-alpha = {
-      source = "hashicorp/kubernetes-alpha"
-    }
     rke = {
       version = ">= 1.1.3"
       source  = "rancher/rke"
