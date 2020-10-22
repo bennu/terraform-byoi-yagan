@@ -85,7 +85,6 @@ variable scheduler_extra_binds { default = [] }
 variable scheduler_extra_env { default = [] }
 variable service_cluster_ip_range { default = "10.43.0.0/16" }
 variable service_node_port_range { default = "30000-32767" }
-variable storage_classes { default = [] }
 variable system_reserved { default = "cpu=700m,memory=1Gi" }
 variable system_reserved_cgroup { default = "/system.slice" }
 variable upgrade_max_unavailable_controlplane { default = "1" }

@@ -85,7 +85,6 @@ module kubernetes {
   scheduler_extra_env                  = var.scheduler_extra_env
   service_cluster_ip_range             = var.service_cluster_ip_range
   service_node_port_range              = var.service_node_port_range
-  storage_classes                      = var.storage_classes
   system_reserved                      = var.system_reserved
   system_reserved_cgroup               = var.system_reserved_cgroup
   upgrade_max_unavailable_controlplane = var.upgrade_max_unavailable_controlplane
