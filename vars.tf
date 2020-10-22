@@ -157,11 +157,13 @@ variable gangway_url { default = "" }
 variable grafana_url { default = "" }
 
 # externaldns vars
+variable dns_zone { default = "" }
 variable external_dns_access_key { default = "" }
 variable external_dns_interval { default = "30s" }
-variable external_dns_region { default = "us-east-1" }
 variable external_dns_prefer_cname { default = false }
+variable external_dns_region { default = "us-east-1" }
 variable external_dns_secret_key { default = "" }
+variable zone_id { default = "" }
 
 # cert-manager
 variable acme_email { default = "" }
