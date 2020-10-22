@@ -129,7 +129,7 @@ module addons {
   dex_ldap_usersearch_nameattr           = var.dex_ldap_usersearch_nameattr
   dex_ldap_usersearch_username           = var.dex_ldap_usersearch_username
   dex_oauth_skip_approval_screen         = var.dex_oauth_skip_approval_screen
-  dex_url                                = var.dex_url
+  dex_url                                = local.dex_url
   dns_zone                               = var.dns_zone
   external_dns_access_key                = var.external_dns_access_key
   external_dns_interval                  = var.external_dns_interval
@@ -138,7 +138,7 @@ module addons {
   external_dns_secret_key                = var.external_dns_secret_key
   gangway_api_server_url                 = module.kubernetes.api_server_url
   gangway_cluster_name                   = module.kubernetes.cluster_name
-  gangway_url                            = format("gangway.%s", var.dns_zone)
+  gangway_url                            = local.gangway_url
   grafana_url                            = var.grafana_url
   ingress_extra_args                     = var.ingress_extra_args
   ingress_max_replicas                   = var.ingress_max_replicas
