@@ -129,7 +129,7 @@ module addons {
   dex_ldap_usersearch_nameattr           = var.dex_ldap_usersearch_nameattr
   dex_ldap_usersearch_username           = var.dex_ldap_usersearch_username
   dex_oauth_skip_approval_screen         = var.dex_oauth_skip_approval_screen
-  dex_url                                = local.dex_url
+  dex_url                                = var.dex_url
   dns_zone                               = var.dns_zone
   external_dns_access_key                = var.external_dns_access_key
   external_dns_interval                  = var.external_dns_interval
