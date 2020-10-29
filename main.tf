@@ -94,7 +94,7 @@ module kubernetes {
 
 module addons {
   source     = "bennu/yagan/addons"
-  version    = "1.0.3"
+  version    = "1.0.4"
   depends_on = [module.kubernetes]
 
   acme_email                             = var.acme_email
@@ -108,6 +108,9 @@ module addons {
   descheduler_rm_node_affinity_violation = var.descheduler_rm_node_affinity_violation
   descheduler_rm_pods_affinity_violation = var.descheduler_rm_pods_affinity_violation
   descheduler_rm_taint_violation         = var.descheduler_rm_taint_violation
+  dex_expiry_device_requests             = var.dex_expiry_device_requests
+  dex_expiry_id_tokens                   = var.dex_expiry_id_tokens
+  dex_expiry_signing_keys                = var.dex_expiry_signing_keys
   dex_ldap_bind_dn                       = var.dex_ldap_bind_dn
   dex_ldap_bind_pw                       = var.dex_ldap_bind_pw
   dex_ldap_endpoint                      = var.dex_ldap_endpoint
