@@ -94,7 +94,7 @@ module kubernetes {
 
 module addons {
   source     = "bennu/yagan/addons"
-  version    = "1.0.4"
+  version    = "1.0.5"
   depends_on = [module.kubernetes]
 
   acme_email                             = var.acme_email
