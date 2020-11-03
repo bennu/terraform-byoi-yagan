@@ -94,7 +94,7 @@ module kubernetes {
 
 module addons {
   source     = "bennu/yagan/addons"
-  version    = "1.0.5"
+  version    = "1.0.7"
   depends_on = [module.kubernetes]
 
   acme_email                             = var.acme_email
@@ -147,6 +147,7 @@ module addons {
   ingress_max_replicas                   = var.ingress_max_replicas
   ingress_min_replicas                   = var.ingress_min_replicas
   ingress_service_type                   = var.ingress_service_type
+  klum_api_server_url                    = module.kubernetes.api_server_url
   kured_timezone                         = var.kured_timezone
   metallb_addresses                      = var.metallb_addresses
   target_treshold_cpu                    = var.target_treshold_cpu
