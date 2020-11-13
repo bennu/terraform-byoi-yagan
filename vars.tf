@@ -89,6 +89,7 @@ variable system_reserved { default = "cpu=700m,memory=1Gi" }
 variable system_reserved_cgroup { default = "/system.slice" }
 variable upgrade_max_unavailable_controlplane { default = "1" }
 variable upgrade_max_unavailable_worker { default = "10%" }
+variable write_cluster_yaml { default = false }
 variable write_kubeconfig { default = true }
 
 # addons

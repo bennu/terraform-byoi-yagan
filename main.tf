@@ -1,6 +1,6 @@
 module kubernetes {
   source  = "bennu/yagan/kubernetes"
-  version = "1.19.3-1"
+  version = "1.19.3-2"
 
   addon_job_timeout                    = var.addon_job_timeout
   addons_include                       = var.addons_include
@@ -89,6 +89,7 @@ module kubernetes {
   system_reserved_cgroup               = var.system_reserved_cgroup
   upgrade_max_unavailable_controlplane = var.upgrade_max_unavailable_controlplane
   upgrade_max_unavailable_worker       = var.upgrade_max_unavailable_worker
+  write_cluster_yaml                   = var.write_cluster_yaml
   write_kubeconfig                     = var.write_kubeconfig
 }
 
