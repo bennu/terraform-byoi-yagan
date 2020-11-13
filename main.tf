@@ -89,6 +89,7 @@ module kubernetes {
   system_reserved_cgroup               = var.system_reserved_cgroup
   upgrade_max_unavailable_controlplane = var.upgrade_max_unavailable_controlplane
   upgrade_max_unavailable_worker       = var.upgrade_max_unavailable_worker
+  write_cluster_yaml                   = var.write_cluster_yaml
   write_kubeconfig                     = var.write_kubeconfig
 }
 
