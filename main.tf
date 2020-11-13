@@ -1,6 +1,6 @@
 module kubernetes {
   source  = "bennu/yagan/kubernetes"
-  version = "1.19.2"
+  version = "1.19.3"
 
   addon_job_timeout                    = var.addon_job_timeout
   addons_include                       = var.addons_include
