@@ -1,4 +1,5 @@
 locals {
+  cloud_provider = var.enable_cloud_provider ? "vsphere" : "none"
   enable_addons  = split(",", var.addons)
   enable_dex     = contains(local.enable_addons, "dex")
   enable_gangway = contains(local.enable_addons, "gangway")

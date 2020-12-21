@@ -30,6 +30,7 @@ variable dns_provider { default = "coredns" }
 variable drain_grace_period { default = "-1" }
 variable drain_on_upgrade { default = true }
 variable drain_timeout { default = 60 }
+variable enable_cloud_provider { default = false }
 variable enforce_node_allocatable { default = "pods,system-reserved,kube-reserved" }
 variable etcd_backup_interval_hours { default = 8 }
 variable etcd_backup_retention { default = 6 }

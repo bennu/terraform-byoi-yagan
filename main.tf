@@ -20,6 +20,7 @@ module kubernetes {
   cilium_service_monitor_enabled       = var.cilium_service_monitor_enabled
   cilium_tunnel                        = var.cilium_tunnel
   cilium_wait_bfp                      = var.cilium_wait_bfp
+  cloud_provider                       = local.cloud_provider
   cluster_cidr                         = var.cluster_cidr
   cluster_domain                       = var.cluster_domain
   delete_local_data_on_drain           = var.delete_local_data_on_drain
@@ -93,7 +94,7 @@ module kubernetes {
 }
 
 module addons {
-  source = "github.com/bennu/terraform-addons-yagan.git?ref=updating"
+  source     = "github.com/bennu/terraform-addons-yagan.git?ref=updating"
   depends_on = [module.kubernetes]
 
   acme_email                             = var.acme_email
