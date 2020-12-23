@@ -1,6 +1,5 @@
 # Yagan BYOI
 
-
 > BYOI stands for *bring your own infrastructure*.
 
 This module aims to deploy kubernetes on pre-created infrastructure, just passing a list of nodes (containing a node names and IPs), ssh private key previuosly configured on hosts and a user.
@@ -15,18 +14,24 @@ module cluster {
       {
         name = "node-0"
         ip = "192.168.1.10"
+        labels = {}
+        taints = []
       }
     ]
     etcd = [
       {
         name = "node-1"
         ip = "192.168.1.11"
+        labels = {}
+        taints = []
       }
     ]
     worker = [
       {
         name = "node-2"
         ip = "192.168.1.12"
+        labels = {}
+        taints = []
       }
     ]
   }
