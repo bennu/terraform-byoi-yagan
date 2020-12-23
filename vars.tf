@@ -13,7 +13,7 @@ variable cilium_allocate_bpf { default = false }
 variable cilium_debug { default = true }
 variable cilium_ipam { default = "kubernetes" }
 variable cilium_monitor { default = "maximum" }
-variable cilium_node_init { default = true }
+variable cilium_node_init { default = false }
 variable cilium_node_init_restart_pods { default = true }
 variable cilium_operator_prometheus_enabled { default = true }
 variable cilium_operator_replicas { default = 2 }
@@ -92,6 +92,39 @@ variable upgrade_max_unavailable_worker { default = "10%" }
 variable write_cluster_yaml { default = false }
 variable write_kubeconfig { default = true }
 
+# vsphere cloud provider
+
+variable enable_cloud_provider { default = false }
+
+variable vsphere_username {
+  description = "vSphere username"
+  default     = ""
+}
+variable vsphere_port {
+  description = "vSphere port"
+  default     = 443
+}
+variable vsphere_insecure_flag {
+  description = "Do not verify tls cert"
+  default     = true
+}
+variable vsphere_password {
+  description = "vSphere password"
+  default     = ""
+}
+variable vsphere_server {
+  description = "vSphere server"
+  default     = ""
+}
+variable vsphere_datacenter {
+  description = "vSphere datacenter"
+  default     = ""
+}
+variable vsphere_cluster_id {
+  description = "vSphere cluster ID"
+  default     = ""
+}
+
 # addons
 variable addons { default = "cert-manager,descheduler,dex,externaldns,gangway,gatekeeper,ingress,klum,kured,metallb" }
 
@@ -161,20 +194,81 @@ variable gangway_url { default = "" }
 variable grafana_url { default = "" }
 
 # externaldns vars
-variable dns_zone { default = "" }
-variable external_dns_access_key { default = "" }
-variable external_dns_interval { default = "30s" }
-variable external_dns_prefer_cname { default = false }
-variable external_dns_region { default = "us-east-1" }
-variable external_dns_secret_key { default = "" }
-variable zone_id { default = "" }
+variable dns_zone {
+  description = "DNS zone to manage"
+  default     = ""
+}
+variable external_dns_provider { default = "aws" }
+variable external_dns_aws_access_key {
+  description = "AWS access key to manage DNS zone"
+  default     = ""
+}
+variable external_dns_interval {
+  description = "Interval to watch cluster for changes"
+  default     = "30s"
+}
+variable external_dns_aws_region {
+  description = "AWS region to manage DNS zone"
+  default     = "us-east-1"
+}
+variable external_dns_aws_prefer_cname {
+  description = "Prefer CNAME records"
+  default     = false
+}
+variable external_dns_aws_secret_key {
+  description = "AWS secret key to manage DNS zone"
+  default     = ""
+}
+variable external_dns_rfc_host { default = "" }
+variable external_dns_rfc_ttl { default = "0s" }
+variable external_dns_rfc_port { default = 53 }
+variable external_dns_rfc_axfr { default = false }
+variable external_dns_rfc_alg { default = "" }
+variable external_dns_rfc_secret { default = "" }
+variable external_dns_rfc_zone { default = "" }
+variable external_dns_txt_owner_id { default = "" }
+variable external_dns_rfc_key { default = "" }
 
 # cert-manager
-variable acme_email { default = "" }
-variable acme_server { default = "production" }
-variable cert_manager_access_key { default = "" }
-variable cert_manager_aws_region { default = "us-east-1" }
-variable cert_manager_secret_key { default = "" }
+variable cert_manager_provider {
+  default = "aws"
+}
+variable acme_email {
+  description = "Email for creating acme account"
+  default     = ""
+}
+variable acme_server {
+  description = "Server to fetch LE certs from"
+  default     = "production"
+}
+variable cert_manager_access_key {
+  description = "AWS access key to manage DNS zone"
+  default     = ""
+}
+variable cert_manager_aws_region {
+  description = "AWS region to manage DNS zone"
+  default     = "us-east-1"
+}
+variable cert_manager_secret_key {
+  description = "secret key to manage DNS zone"
+  default     = ""
+}
+variable zone_id {
+  description = "DNS zone id to manage"
+  default     = ""
+}
+variable cert_manager_zone {
+  default = ""
+}
+variable cert_manager_rfc_nameserver {
+  default = ""
+}
+variable cert_manager_rfc_alg {
+  default = ""
+}
+variable cert_manager_rfc_key_name {
+  default = ""
+}
 
 # metallb
 variable metallb_addresses { default = "" }
