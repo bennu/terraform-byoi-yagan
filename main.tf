@@ -1,5 +1,5 @@
 module kubernetes {
-  source = "github.com/bennu/terraform-kubernetes-yagan.git?ref=updating"
+  source = "github.com/bennu/terraform-kubernetes-yagan.git?ref=v1.20.0"
 
   addon_job_timeout                    = var.addon_job_timeout
   addons_include                       = var.addons_include
@@ -101,7 +101,8 @@ module kubernetes {
 }
 
 module addons {
-  source     = "github.com/bennu/terraform-addons-yagan.git?ref=updating"
+  source     = "bennu/yagan/addons"
+  version    = "1.1.0"
   depends_on = [module.kubernetes]
 
   acme_email                             = var.acme_email
