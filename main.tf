@@ -1,5 +1,5 @@
 module kubernetes {
-  source = "github.com/bennu/terraform-kubernetes-yagan.git?ref=1.20.1"
+  source = "github.com/bennu/terraform-kubernetes-yagan.git?ref=v1.20.1"
   # source  = "bennu/yagan/kubernetes"
   # version = "1.20.1"
 
