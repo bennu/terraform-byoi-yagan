@@ -1,6 +1,7 @@
 module kubernetes {
-  source  = "bennu/yagan/kubernetes"
-  version = "1.20.0"
+  source = "github.com/bennu/terraform-kubernetes-yagan.git?ref=1.20.1"
+  # source  = "bennu/yagan/kubernetes"
+  # version = "1.20.1"
 
   addon_job_timeout                    = var.addon_job_timeout
   addons_include                       = var.addons_include
@@ -78,6 +79,10 @@ module kubernetes {
   pod_eviction_timeout                 = var.pod_eviction_timeout
   pod_security_policy                  = var.pod_security_policy
   private_key                          = var.private_key
+  registry_url                         = var.registry_url
+  registry_username                    = var.registry_username
+  registry_password                    = var.registry_password
+  registry_activate                    = var.registry_activate
   resource_naming                      = var.resource_naming
   rke_authorization                    = var.rke_authorization
   sans                                 = var.sans

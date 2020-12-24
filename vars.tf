@@ -92,6 +92,24 @@ variable upgrade_max_unavailable_worker { default = "10%" }
 variable write_cluster_yaml { default = false }
 variable write_kubeconfig { default = true }
 
+# registry configuration
+variable registry_url {
+  description = "Registry URL for images"
+  default     = ""
+}
+variable registry_username {
+  description = "Username access for Registry server"
+  default     = ""
+}
+variable registry_password {
+  description = "Password access for Registry server"
+  default     = ""
+}
+variable registry_activate {
+  description = "Able to activate registry server"
+  default     = false
+}
+
 # vsphere cloud provider
 
 variable enable_cloud_provider { default = false }
