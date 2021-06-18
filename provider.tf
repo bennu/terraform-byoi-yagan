@@ -1,4 +1,4 @@
-provider kubernetes {
+provider "kubernetes" {
   client_certificate     = module.kubernetes.client_cert
   client_key             = module.kubernetes.client_key
   cluster_ca_certificate = module.kubernetes.ca_crt
@@ -19,7 +19,7 @@ provider kubernetes {
 #   username               = module.kubernetes.kube_admin_user
 # }
 
-provider helm {
+provider "helm" {
   kubernetes {
     client_certificate     = module.kubernetes.client_cert
     client_key             = module.kubernetes.client_key
