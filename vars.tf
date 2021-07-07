@@ -288,6 +288,9 @@ variable "cert_manager_rfc_alg" {
 variable "cert_manager_rfc_key_name" {
   default = ""
 }
+variable "create_default_cert" {
+  default = true
+}
 
 # metallb
 variable "metallb_addresses" { default = "" }

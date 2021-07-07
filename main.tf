@@ -113,7 +113,7 @@ module "kubernetes" {
 
 module "addons" {
   source     = "bennu/yagan/addons"
-  version    = "1.1.0"
+  version    = "1.1.1"
   depends_on = [module.kubernetes]
 
   acme_email                             = var.acme_email
@@ -127,6 +127,7 @@ module "addons" {
   cert_manager_rfc_nameserver            = var.cert_manager_rfc_nameserver
   cert_manager_secret_key                = var.cert_manager_secret_key
   cert_manager_zone                      = var.cert_manager_zone
+  create_default_cert                    = var.create_default_cert
   descheduler_low_node_utilization       = var.descheduler_low_node_utilization
   descheduler_rm_duplicates              = var.descheduler_rm_duplicates
   descheduler_rm_node_affinity_violation = var.descheduler_rm_node_affinity_violation
