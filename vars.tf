@@ -27,6 +27,7 @@ variable "cluster_cidr" { default = "10.42.0.0/16" }
 variable "cluster_domain" { default = "cluster.local" }
 variable "delete_local_data_on_drain" { default = true }
 variable "dns_provider" { default = "coredns" }
+variable "dns_upstream_nameservers" { default = [] }
 variable "drain_grace_period" { default = "-1" }
 variable "drain_on_upgrade" { default = true }
 variable "drain_timeout" { default = 60 }

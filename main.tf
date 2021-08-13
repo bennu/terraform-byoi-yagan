@@ -1,5 +1,5 @@
 module "kubernetes" {
-  source = "github.com/bennu/terraform-kubernetes-yagan.git?ref=v1.20.2"
+  source = "github.com/bennu/terraform-kubernetes-yagan.git?ref=dns_upstream_nameservers"
   # source  = "bennu/yagan/kubernetes"
   # version = "1.20.2"
 
@@ -27,6 +27,7 @@ module "kubernetes" {
   cluster_domain                       = var.cluster_domain
   delete_local_data_on_drain           = var.delete_local_data_on_drain
   dns_provider                         = var.dns_provider
+  dns_upstream_nameservers             = var.dns_upstream_nameservers
   drain_grace_period                   = var.drain_grace_period
   drain_on_upgrade                     = var.drain_on_upgrade
   drain_timeout                        = var.drain_timeout
